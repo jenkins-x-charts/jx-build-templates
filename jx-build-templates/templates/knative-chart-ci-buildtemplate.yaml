@@ -1,0 +1,23 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: BuildTemplate
+metadata:
+  name: knative-chart-ci
+spec:
+  parameters:
+  - name: WORKSPACE
+    description: Worksace including any subpaths to work in
+    default: /workspace
+  steps:
+  - image: jenkinsxio/builder-base:{{ .Values.baseTag }}
+    name: "continuous-integration"
+    args:
+    - make
+    - build
+    resources:
+      limits:
+        cpu: 0.2
+        memory: 128Mi
+      requests:
+        cpu: 0.1
+        memory: 74Mi
+    workingDir: "${WORKSPACE}"
