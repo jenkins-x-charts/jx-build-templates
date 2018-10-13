@@ -1,0 +1,24 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: BuildTemplate
+metadata:
+  name: knative-deploy
+spec:
+  parameters:
+  - name: ADDON_NAME
+    description: Name of the addon to upgrade, leave blank to upgrade all
+    default: ""
+  steps:
+  - image: jenkinsxio/builder-base:{{ .Values.baseTag }}
+    name: "deploy"
+    args:
+    - jx
+    - upgrade
+    - addon
+    - ${ADDON_NAME}
+    resources:
+      limits:
+        cpu: 200m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 74Mi
