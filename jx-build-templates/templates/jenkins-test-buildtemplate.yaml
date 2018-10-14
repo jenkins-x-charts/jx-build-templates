@@ -42,4 +42,6 @@ spec:
       secretName: jenkins-docker-cfg
   - hostPath:
       path: /var/run/docker.sock
-    name: docker-sock-volume
+    name: docker-sock-
+  serviceAccountName: jenkins
+  
