@@ -48,3 +48,5 @@ spec:
   - name: jenkins-maven-settings
     secret:
       secretName: jenkins-maven-settings
+  serviceAccountName: jenkins
+  
