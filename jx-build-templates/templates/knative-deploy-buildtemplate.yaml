@@ -8,6 +8,35 @@ spec:
     description: Name of the addon to upgrade, leave blank to upgrade all
     default: ""
   steps:
+  - args:
+    - helm
+    - init
+    - --client-only
+    - http://chartmuseum.jenkins-x.io
+    image: jenkinsxio/builder-base:0.0.623
+    name: deploy
+    resources:
+      limits:
+        cpu: 200m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 74Mi
+  - args:
+    - helm
+    - repo
+    - add
+    - jenkins-x
+    - http://chartmuseum.jenkins-x.io
+    image: jenkinsxio/builder-base:0.0.623
+    name: deploy
+    resources:
+      limits:
+        cpu: 200m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 74Mi
   - image: jenkinsxio/builder-base:{{ .Values.baseTag }}
     name: "deploy"
     args:
