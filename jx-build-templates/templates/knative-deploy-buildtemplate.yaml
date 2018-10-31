@@ -14,7 +14,7 @@ spec:
     - --client-only
     - http://chartmuseum.jenkins-x.io
     image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
-    name: deploy
+    name: "helm-init"
     resources:
       limits:
         cpu: 200m
@@ -29,7 +29,7 @@ spec:
     - jenkins-x
     - http://chartmuseum.jenkins-x.io
     image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
-    name: deploy
+    name: "helm-add-repo"
     resources:
       limits:
         cpu: 200m
