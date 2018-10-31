@@ -8,7 +8,7 @@ spec:
     description: Worksace including any subpaths to work in
     default: /workspace
   steps:
-  - image: jenkinsxio/builder-base:{{ .Values.baseTag }}
+  - image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
     name: "continuous-integration"
     args:
     - make

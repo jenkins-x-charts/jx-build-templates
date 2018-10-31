@@ -13,7 +13,7 @@ spec:
     - init
     - --client-only
     - http://chartmuseum.jenkins-x.io
-    image: jenkinsxio/builder-base:0.0.623
+    image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
     name: deploy
     resources:
       limits:
@@ -28,7 +28,7 @@ spec:
     - add
     - jenkins-x
     - http://chartmuseum.jenkins-x.io
-    image: jenkinsxio/builder-base:0.0.623
+    image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
     name: deploy
     resources:
       limits:
@@ -37,7 +37,7 @@ spec:
       requests:
         cpu: 100m
         memory: 74Mi
-  - image: jenkinsxio/builder-base:{{ .Values.baseTag }}
+  - image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
     name: "deploy"
     args:
     - jx
