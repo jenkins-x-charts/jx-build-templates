@@ -12,7 +12,6 @@ spec:
     - helm
     - init
     - --client-only
-    - http://chartmuseum.jenkins-x.io
     image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
     name: "helm-init"
     resources:
