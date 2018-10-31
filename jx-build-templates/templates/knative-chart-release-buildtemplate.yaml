@@ -8,7 +8,7 @@ spec:
     description: Worksace including any subpaths to work in
     default: /workspace
   steps:
-  - image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
+  - image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     env:
     - name: GIT_COMMITTER_EMAIL
       value: jenkins-x@googlegroups.com
@@ -44,7 +44,7 @@ spec:
         secretKeyRef:
           key: BASIC_AUTH_PASS
           name: jenkins-x-chartmuseum
-    image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
+    image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     name: "release"
     args:
     - make

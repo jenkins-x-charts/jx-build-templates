@@ -12,7 +12,7 @@ spec:
     - helm
     - init
     - --client-only
-    image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
+    image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     name: "helm-init"
     resources:
       limits:
@@ -27,7 +27,7 @@ spec:
     - add
     - jenkins-x
     - http://chartmuseum.jenkins-x.io
-    image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
+    image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     name: "helm-add-repo"
     resources:
       limits:
@@ -36,7 +36,7 @@ spec:
       requests:
         cpu: 100m
         memory: 74Mi
-  - image: jenkinsxio/jenkins-base:{{ .Values.jenkinsTag }}
+  - image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     name: "deploy"
     args:
     - jx
