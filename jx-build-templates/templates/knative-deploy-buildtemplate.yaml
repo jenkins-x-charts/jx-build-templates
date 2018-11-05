@@ -26,7 +26,7 @@ spec:
     - repo
     - add
     - jenkins-x
-    - https://chartmuseum.jx.cd.jenkins-x.io
+    - http://chartmuseum.jenkins-x.io
     image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     name: "helm-add-repo"
     resources:
