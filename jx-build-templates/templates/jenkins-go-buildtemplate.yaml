@@ -3,9 +3,6 @@ kind: BuildTemplate
 metadata:
   name: jenkins-go
 spec:
-  parameters:
-  - name: BUILDER
-    description: Builder image to use
   steps:
   - env:
     - name: GIT_COMMITTER_EMAIL
