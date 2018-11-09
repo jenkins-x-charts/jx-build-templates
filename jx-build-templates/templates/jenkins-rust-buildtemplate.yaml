@@ -18,6 +18,8 @@ spec:
       value: /home/jenkins
     - name: DOCKER_CONFIG
       value: /home/jenkins/.docker/
+    - name: _JAVA_OPTIONS
+      value: "-Xmx400m"
     - name: DOCKER_REGISTRY
       valueFrom:
         configMapKeyRef:
