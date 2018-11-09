@@ -3,6 +3,7 @@ kind: BuildTemplate
 metadata:
   name: jenkins-javascript
 spec:
+  timeout: 60m
   steps:
   - env:
     - name: GIT_COMMITTER_EMAIL
