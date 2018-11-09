@@ -29,7 +29,7 @@ spec:
     resources:
       limits:
         cpu: 200m
-        memory: 128Mi
+        memory: 256Mi
       requests:
         cpu: 100m
         memory: 74Mi
@@ -53,8 +53,8 @@ spec:
     resources:
       limits:
         cpu: 200m
-        memory: 128Mi
+        memory: 256Mi
       requests:
         cpu: 100m
-        memory: 74Mi
+        memory: 128Mi
     workingDir: "${WORKSPACE}"

@@ -18,10 +18,10 @@ spec:
     resources:
       limits:
         cpu: 200m
-        memory: 128Mi
+        memory: 256Mi
       requests:
         cpu: 100m
-        memory: 74Mi
+        memory: 128Mi
   - args:
     - helm
     - repo
@@ -33,10 +33,10 @@ spec:
     resources:
       limits:
         cpu: 200m
-        memory: 128Mi
+        memory: 256Mi
       requests:
         cpu: 100m
-        memory: 74Mi
+        memory: 128Mi
   - image: jenkinsxio/builder-base:{{ .Values.builderTag }}
     name: "deploy"
     args:
@@ -47,7 +47,7 @@ spec:
     resources:
       limits:
         cpu: 200m
-        memory: 128Mi
+        memory: 256Mi
       requests:
         cpu: 100m
-        memory: 74Mi
+        memory: 128Mi
