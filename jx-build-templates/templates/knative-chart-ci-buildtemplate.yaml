@@ -3,6 +3,7 @@ kind: BuildTemplate
 metadata:
   name: knative-chart-ci
 spec:
+  timeout: 60m
   parameters:
   - name: WORKSPACE
     description: Worksace including any subpaths to work in

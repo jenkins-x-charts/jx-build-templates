@@ -3,6 +3,7 @@ kind: BuildTemplate
 metadata:
   name: knative-deploy
 spec:
+  timeout: 60m
   parameters:
   - name: ADDON_NAME
     description: Name of the addon to upgrade, leave blank to upgrade all
