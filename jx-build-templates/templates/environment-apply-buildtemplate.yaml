@@ -1,0 +1,31 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: BuildTemplate
+metadata:
+  name: environment-apply
+spec:
+  parameters:
+  - name: APPLY_NAMESPACE
+    description: Namespace to apply changes to
+  timeout: 60m
+  steps:
+  - env:
+    - name: CHART_REPOSITORY
+      value: http://jenkins-x-chartmuseum:8080
+    - name: DEPLOY_NAMESPACE
+      value: "${APPLY_NAMESPACE}"
+    image: jenkinsxio/builder-base:{{ .Values.builderTag }}
+    name: apply
+    args:
+    - jx
+    - step
+    - helm
+    - apply
+    resources:
+      limits:
+        cpu: "0.4"
+        memory: 256Mi
+      requests:
+        cpu: "0.2"
+        memory: 128Mi
+    workingDir: env
+  serviceAccountName: helm
