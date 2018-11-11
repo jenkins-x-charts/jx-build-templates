@@ -46,5 +46,5 @@ spec:
   - hostPath:
       path: /var/run/docker.sock
     name: docker-sock-
-  serviceAccountName: jenkins
+  serviceAccountName: knative-build-bot
   
