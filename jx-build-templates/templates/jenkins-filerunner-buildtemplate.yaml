@@ -45,5 +45,3 @@ spec:
   - hostPath:
       path: /var/run/docker.sock
     name: docker-sock-volume
-  serviceAccountName: knative-build-bot
-  

@@ -23,4 +23,3 @@ spec:
         cpu: "0.2"
         memory: 128Mi
     workingDir: env
-  serviceAccountName: helm

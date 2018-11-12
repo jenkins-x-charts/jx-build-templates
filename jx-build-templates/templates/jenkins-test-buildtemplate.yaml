@@ -45,6 +45,5 @@ spec:
       secretName: jenkins-docker-cfg
   - hostPath:
       path: /var/run/docker.sock
-    name: docker-sock-
-  serviceAccountName: knative-build-bot
+    name: docker-sock-volume
   
