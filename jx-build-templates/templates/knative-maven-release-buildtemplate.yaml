@@ -30,7 +30,8 @@ spec:
           key: docker.registry
           name: jenkins-x-docker-registry
     image: jenkinsxio/jenkins-maven:{{ .Values.jenkinsTag }}
-    command: jx/scripts/release.sh
+    command:
+    - "jx/scripts/release.sh"
     name: "release"
     resources:
       limits:
