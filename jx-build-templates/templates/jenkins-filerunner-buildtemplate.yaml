@@ -18,7 +18,8 @@ spec:
       value: /home/jenkins
     - name: DOCKER_CONFIG
       value: /home/jenkins/.docker/
-
+    - name: BUILD_NUMBER
+      value: $BUILD_ID
     - name: DOCKER_REGISTRY
       valueFrom:
         configMapKeyRef:
