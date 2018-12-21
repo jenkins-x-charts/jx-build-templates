@@ -1,0 +1,31 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: BuildTemplate
+metadata:
+  name: jenkins-go-nodocker
+spec:
+  timeout: 60m
+  steps:
+  - env:
+    - name: GIT_COMMITTER_EMAIL
+      value: jenkins-x@googlegroups.com
+    - name: GIT_AUTHOR_EMAIL
+      value: jenkins-x@googlegroups.com
+    - name: GIT_AUTHOR_NAME
+      value: jenkins-x-bot
+    - name: GIT_COMMITTER_NAME
+      value: jenkins-x-bot
+    - name: XDG_CONFIG_HOME
+      value: /home/jenkins
+    - name: _JAVA_OPTIONS
+      value: "-Xmx400m"
+    - name: BUILD_NUMBER
+      value: $BUILD_ID
+    image: jenkinsxio/jenkins-go:{{ .Values.jenkinsTag }}
+    name: "jenkins"
+    resources:
+      limits:
+        cpu: 3
+        memory: 5Gi
+      requests:
+        cpu: "0.5"
+        memory: 1Gi
