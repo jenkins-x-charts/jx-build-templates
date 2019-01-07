@@ -41,6 +41,8 @@ spec:
       name: jenkins-docker-cfg
     - mountPath: /var/run/docker.sock
       name: docker-sock-volume
+    - mountPath: /root/.m2/
+      name: jenkins-maven-settings
   volumes:
   - name: jenkins-docker-cfg
     secret:
@@ -48,3 +50,6 @@ spec:
   - hostPath:
       path: /var/run/docker.sock
     name: docker-sock-volume
+  - name: jenkins-maven-settings
+    secret:
+      secretName: jenkins-maven-settings
