@@ -19,7 +19,7 @@ spec:
     - name: DOCKER_CONFIG
       value: /home/jenkins/.docker/
     - name: _JAVA_OPTIONS
-      value: "-Xmx400m"
+      value: "-Xmx1024m"
     - name: BUILD_NUMBER
       value: $BUILD_ID
     - name: DOCKER_REGISTRY
