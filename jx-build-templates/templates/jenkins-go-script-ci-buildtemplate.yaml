@@ -1,7 +1,7 @@
 apiVersion: build.knative.dev/v1alpha1
 kind: BuildTemplate
 metadata:
-  name: jenkins-go-script-release
+  name: jenkins-go-script-ci
 spec:
   timeout: 60m
   steps:
@@ -29,7 +29,7 @@ spec:
           name: jenkins-x-docker-registry
     image: jenkinsxio/jenkins-go:{{ .Values.jenkinsTag }}
     command:
-    - "jx/scripts/release.sh"
+    - "jx/scripts/ci.sh"
     name: "jenkins"
     resources:
       limits:
