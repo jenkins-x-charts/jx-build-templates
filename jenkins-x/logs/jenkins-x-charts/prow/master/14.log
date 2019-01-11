@@ -1,0 +1,17 @@
+Step: build-step-credential-initializer:
+
+{"level":"warn","ts":1547210639.132133,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/test\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1547210639.1325421,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-0:
+
+{"level":"warn","ts":1547210639.7075276,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/test\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1547210640.9336758,"logger":"fallback-logger","caller":"git-init/main.go:92","msg":"Successfully cloned \"https://github.com/jenkins-x-charts/prow.git\" @ \"66561c45c613d79995d21bee1a89b10037a1a19a\" in path \"/workspace\""}
+Step: build-step-credentials:
+
+Tag v0.0.56 created and pushed to remote origin
+Step: build-step-release:
+
+rm -rf charts
+rm -rf prow*.tgz
+rm -rf requirements.lock
+helm init --client-only
