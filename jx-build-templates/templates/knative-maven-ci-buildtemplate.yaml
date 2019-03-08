@@ -29,7 +29,7 @@ spec:
         configMapKeyRef:
           key: docker.registry
           name: jenkins-x-docker-registry
-    image: jenkinsxio/jenkins-maven:{{ .Values.jenkinsTag }}
+    image: gcr.io/jenkinsxio/jenkins-maven:{{ .Values.jenkinsTag }}
     command:
     - "jx/scripts/ci.sh"
     name: "ci"
