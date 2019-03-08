@@ -27,7 +27,7 @@ spec:
         configMapKeyRef:
           key: docker.registry
           name: jenkins-x-docker-registry
-    image: jenkinsxio/jenkins-scala:{{ .Values.jenkinsTag }}
+    image: gcr.io/jenkinsxio/jenkins-scala:{{ .Values.jenkinsTag }}
     name: "jenkins"
     resources:
       limits:

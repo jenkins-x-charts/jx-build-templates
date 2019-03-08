@@ -20,7 +20,7 @@ spec:
       value: "-Xmx400m"
     - name: BUILD_NUMBER
       value: $BUILD_ID
-    image: jenkinsxio/jenkins-go:{{ .Values.jenkinsTag }}
+    image: gcr.io/jenkinsxio/jenkins-go:{{ .Values.jenkinsTag }}
     name: "jenkins"
     resources:
       limits:
