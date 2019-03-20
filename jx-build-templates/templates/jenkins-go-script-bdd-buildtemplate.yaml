@@ -65,7 +65,7 @@ spec:
         configMapKeyRef:
           key: docker.registry
           name: jenkins-x-docker-registry
-    image: gcr.io/jenkinsxio/allure:0.0.5
+    image: jenkinsxio/allure:0.0.5
     command:
     - "jx/scripts/allure.sh"
     name: "allure"
