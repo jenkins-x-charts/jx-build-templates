@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+jq --version
+
 JENKINS_TAG=$(yq r jx-build-templates/values.yaml jenkinsTag)
 BUILDERS_TAG=$(yq r jx-build-templates/values.yaml builderTag)
 IMAGES=$(cat jx-build-templates/templates/*.yaml | grep image | grep -v allure | sed 's/- image: //' | sed 's/image: //' | sed "s/{{ .Values.jenkinsTag }}/$JENKINS_TAG/" | sed "s/{{ .Values.builderTag }}/$BUILDERS_TAG/" )
