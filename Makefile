@@ -14,6 +14,7 @@ setup: init
 build: clean setup
 	helm dependency build jx-build-templates
 	helm lint jx-build-templates
+	./jx/scripts/test.sh
 
 install: clean build
 	helm upgrade ${NAME} jx-build-templates --install
