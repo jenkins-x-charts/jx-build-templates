@@ -3,11 +3,11 @@ dependencies:
   owner: jenkins-x
   repo: jenkins-x-builders
   url: https://github.com/jenkins-x/jenkins-x-builders
-  version: 0.1.569
+  version: 0.1.570
   versionURL: ""
 - host: github.com
   owner: jenkins-x
   repo: jenkins-x-serverless
   url: https://github.com/jenkins-x/jenkins-x-serverless
-  version: 256.0.380
-  versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/256.0.380
+  version: 256.0.381
+  versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/256.0.381
