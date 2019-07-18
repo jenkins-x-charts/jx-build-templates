@@ -9,8 +9,8 @@ dependencies:
   owner: jenkins-x
   repo: jenkins-x-serverless
   url: https://github.com/jenkins-x/jenkins-x-serverless
-  version: 256.0.394
-  versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.394
+  version: 256.0.395
+  versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.395
 - host: github.com
   owner: jenkins-x
   repo: jx
