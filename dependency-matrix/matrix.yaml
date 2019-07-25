@@ -9,8 +9,8 @@ dependencies:
   owner: jenkins-x
   repo: jenkins-x-serverless
   url: https://github.com/jenkins-x/jenkins-x-serverless
-  version: 256.0.412
-  versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.412
+  version: 256.0.413
+  versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.413
 - host: github.com
   owner: jenkins-x
   repo: jx
@@ -20,10 +20,10 @@ dependencies:
       owner: jenkins-x
       repo: jenkins-x-serverless
       url: https://github.com/jenkins-x/jenkins-x-serverless
-      version: 256.0.412
-      versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.412
-    version: 2.0.512
-    versionURL: https://github.com/jenkins-x/jx/releases/tag/v2.0.512
+      version: 256.0.413
+      versionURL: https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.413
+    version: 2.0.513
+    versionURL: https://github.com/jenkins-x/jx/releases/tag/v2.0.513
   url: https://github.com/jenkins-x/jx
-  version: 2.0.512
-  versionURL: https://github.com/jenkins-x/jx/releases/tag/v2.0.512
+  version: 2.0.513
+  versionURL: https://github.com/jenkins-x/jx/releases/tag/v2.0.513
