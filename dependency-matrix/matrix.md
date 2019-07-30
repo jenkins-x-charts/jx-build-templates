@@ -2,6 +2,6 @@
 
 Dependency | Sources | Version | Mismatched versions
 ---------- | ------- | ------- | -------------------
-[jenkins-x/jenkins-x-builders](https://github.com/jenkins-x/jenkins-x-builders) |  | [0.1.609]() | 
-[jenkins-x/jenkins-x-serverless](https://github.com/jenkins-x/jenkins-x-serverless) |  | [256.0.420](https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.420) | 
-[jenkins-x/jx](https://github.com/jenkins-x/jx) | [github.com/jenkins-x/jenkins-x-serverless](https://github.com/jenkins-x/jenkins-x-serverless) | [2.0.528](https://github.com/jenkins-x/jx/releases/tag/v2.0.528) | 
+[jenkins-x/jenkins-x-builders](https://github.com/jenkins-x/jenkins-x-builders) |  | [0.1.608]() | 
+[jenkins-x/jenkins-x-serverless](https://github.com/jenkins-x/jenkins-x-serverless) |  | [256.0.421](https://github.com/jenkins-x/jenkins-x-serverless/releases/tag/v256.0.421) | 
+[jenkins-x/jx](https://github.com/jenkins-x/jx) | [github.com/jenkins-x/jenkins-x-serverless](https://github.com/jenkins-x/jenkins-x-serverless) | [2.0.531](https://github.com/jenkins-x/jx/releases/tag/v2.0.531) | 
