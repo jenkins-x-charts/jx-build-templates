@@ -1,0 +1,81 @@
+Step: build-step-credential-initializer-f8pfc:
+
+Unable to retrieve container logs for docker://62bcab5a8df72b52b617e066ffaab34b70001010f0ffae229e1239c5eeb3411c
+Step: build-step-working-dir-initializer-tgl8z:
+
+Unable to retrieve container logs for docker://411c801fa1b7a525a391558a0082621c4d9ab15619e7d642a074b1c14faa1326
+Step: build-step-place-tools:
+
+Unable to retrieve container logs for docker://36959d427641397055a8c82f54a34f6cd4b8429bc8e7e06b1ffe522c94e50905
+Step: build-step-git-source-jenkins-x-charts-**-build-templ-4sslq:
+
+{"level":"warn","ts":1565287098.9051824,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565287100.477771,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jenkins-x-charts/**-build-templates @ 48d7c95fa8ed7a5b0335247f549a972536c07a4b in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-08-08T17:58:21Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:92f26e046822936960d15fcb94dcb62498934059,899:48d7c95fa8ed7a5b0335247f549a972536c07a4b
+ran git fetch --unshallow origin 48d7c95fa8ed7a5b0335247f549a972536c07a4b: 92f26e046822936960d15fcb94dcb62498934059: in 
+ran git checkout master in 
+ran git reset --hard 92f26e046822936960d15fcb94dcb62498934059 in 
+ran clean --force -d . in 
+ran git merge 48d7c95fa8ed7a5b0335247f549a972536c07a4b in 
+Step: build-step-build-build:
+
+cat: /builder/home/basic-auth-user.json: No such file or directory
+cat: /builder/home/basic-auth-pass.json: No such file or directory
+rm -rf **-build-templates/charts
+rm -rf **-build-templates/**-build-templates*.tgz
+rm -rf **-build-templates/requirements.lock
+helm init --client-only
+Creating /builder/home/.helm 
+Creating /builder/home/.helm/repository 
+Creating /builder/home/.helm/repository/cache 
+Creating /builder/home/.helm/repository/local 
+Creating /builder/home/.helm/plugins 
+Creating /builder/home/.helm/starters 
+Creating /builder/home/.helm/cache/archive 
+Creating /builder/home/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Adding local repo with URL: http://127.0.0.1:8879/charts 
+$HELM_HOME has been configured at /builder/home/.helm.
+Not installing Tiller due to 'client-only' flag having been set
+helm repo add jenkinsxio https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkinsxio" has been added to your repositories
+helm dependency build **-build-templates
+No requirements found in **-build-templates/charts.
+helm lint **-build-templates
+==> Linting **-build-templates
+Lint OK
+
+1 chart(s) linted, no failures
+./**/scripts/test.sh
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/jenkins-**:256.0.422
+gcr.io/jenkinsxio/jenkins-csharp:256.0.422
+gcr.io/jenkinsxio/jenkins-cwp:256.0.422
+gcr.io/jenkinsxio/jenkins-elixir:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-gradle:256.0.422
+gcr.io/jenkinsxio/jenkins-javascript:256.0.422
+gcr.io/jenkinsxio/jenkins-jenkins:256.0.422
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+gcr.io/jenkinsxio/jenkins-python:256.0.422
+gcr.io/jenkinsxio/jenkins-ruby:256.0.422
+gcr.io/jenkinsxio/jenkins-rust:256.0.422
+gcr.io/jenkinsxio/jenkins-scala:256.0.422
+gcr.io/jenkinsxio/jenkins-**:256.0.422
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/builder-**:0.1.640
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
