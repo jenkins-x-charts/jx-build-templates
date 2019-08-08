@@ -1,19 +1,37 @@
-Step: build-step-credential-initializer:
+Step: build-step-credential-initializer-9wwz9:
 
-{"level":"warn","ts":1547511075.9351673,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/test\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1547511075.9358153,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
-Step: build-step-git-source-0:
+{"level":"warn","ts":1565292321.7099664,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565292321.7104778,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-working-dir-initializer-zz544:
 
-{"level":"warn","ts":1547511077.3010123,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/test\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1547511078.6937592,"logger":"fallback-logger","caller":"git-init/main.go:92","msg":"Successfully cloned \"https://github.com/jenkins-x-charts/jx-build-templates.git\" @ \"7e8c6d078c3c3da8672ac8fdb20f672b6787e6f5\" in path \"/workspace\""}
-Step: build-step-credentials:
+{"level":"warn","ts":1565292322.1782005,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565292322.1794488,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: build-step-place-tools:
 
-Tag v0.0.335 created and pushed to remote origin
-Step: build-step-release:
+Step: build-step-git-source-jenkins-x-charts-**-build-templ-dvmst:
 
-rm -rf charts
-rm -rf jx-build-templates*.tgz
-rm -rf requirements.lock
+{"level":"warn","ts":1565292324.2645264,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565292325.9340532,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jenkins-x-charts/**-build-templates @ v0.0.875 in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-08-08T19:25:26Z" level=info msg="got "
+time="2019-08-08T19:25:26Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Using SHAs from PULL_REFS=master:66d7b0c07be976add5384d841ca9b3c62257d491
+Step: build-step-setup-**-git-credentials:
+
+Generated Git credentials file /builder/home/git/credentials
+Step: build-step-build-basic-auth-username:
+
+/builder/home/basic-auth-user.json
+Step: build-step-build-basic-auth-password:
+
+/builder/home/basic-auth-pass.json
+Step: build-step-build-release:
+
+rm -rf **-build-templates/charts
+rm -rf **-build-templates/**-build-templates*.tgz
+rm -rf **-build-templates/requirements.lock
 helm init --client-only
 Creating /builder/home/.helm 
 Creating /builder/home/.helm/repository 
@@ -27,21 +45,49 @@ Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com
 Adding local repo with URL: http://127.0.0.1:8879/charts 
 $HELM_HOME has been configured at /builder/home/.helm.
 Not installing Tiller due to 'client-only' flag having been set
-Happy Helming!
-helm repo add jenkinsxio http://chartmuseum.jenkins-x.io 
+helm repo add jenkinsxio https://storage.googleapis.com/chartmuseum.jenkins-x.io
 "jenkinsxio" has been added to your repositories
-helm dependency build
-No requirements found in ./charts.
-helm lint
-==> Linting .
+helm dependency build **-build-templates
+No requirements found in **-build-templates/charts.
+helm lint **-build-templates
+==> Linting **-build-templates
 Lint OK
 
 1 chart(s) linted, no failures
-sed -i -e "s/version:.*/version: 0.0.335/" Chart.yaml
-helm package .
-Successfully packaged chart and saved it to: /workspace/jx-build-templates/jx-build-templates-0.0.335.tgz
-curl --fail -u admin:jxadmin18 --data-binary "@jx-build-templates-0.0.335.tgz" http://jenkins-x-chartmuseum:8080/api/charts
+./**/scripts/test.sh
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/jenkins-**:256.0.422
+gcr.io/jenkinsxio/jenkins-csharp:256.0.422
+gcr.io/jenkinsxio/jenkins-cwp:256.0.422
+gcr.io/jenkinsxio/jenkins-elixir:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-gradle:256.0.422
+gcr.io/jenkinsxio/jenkins-javascript:256.0.422
+gcr.io/jenkinsxio/jenkins-jenkins:256.0.422
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+gcr.io/jenkinsxio/jenkins-python:256.0.422
+gcr.io/jenkinsxio/jenkins-ruby:256.0.422
+gcr.io/jenkinsxio/jenkins-rust:256.0.422
+gcr.io/jenkinsxio/jenkins-scala:256.0.422
+gcr.io/jenkinsxio/jenkins-**:256.0.422
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+sed -i -e "s/version:.*/version: 0.0.875/" **-build-templates/Chart.yaml
+helm package **-build-templates
+Successfully packaged chart and saved it to: /workspace/source/**-build-templates-0.0.875.tgz
+curl --fail -u *****:************ --data-binary "@**-build-templates-0.0.875.tgz" http://jenkins-x-chartmuseum:8080/api/charts
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  3365  100    14  100  3351     64  15475 --:--:-- --:--:-- --:--:-- 15513
-{"saved":true}rm -rf jx-build-templates*.tgz
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  3262  100    14  100  3248     70  16448 --:--:-- --:--:-- --:--:-- 16487
+{"saved":true}rm -rf **-build-templates*.tgz
