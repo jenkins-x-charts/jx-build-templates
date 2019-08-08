@@ -1,0 +1,82 @@
+Step: build-step-credential-initializer-x24bn:
+
+{"level":"warn","ts":1565292138.2484744,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565292138.2490065,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-working-dir-initializer-8fd4h:
+
+{"level":"warn","ts":1565292138.6022496,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565292138.603867,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-source-jenkins-x-charts-**-build-templ-7hpdq:
+
+{"level":"warn","ts":1565292140.7168074,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565292142.1930742,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jenkins-x-charts/**-build-templates @ 6f1e2404013390bb13efa79460ecad01155840e5 in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-08-08T19:22:23Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:dc018a49e64ad3a1bbf9a4db1f5576a35c9b72e5,900:6f1e2404013390bb13efa79460ecad01155840e5
+ran git fetch --unshallow origin 6f1e2404013390bb13efa79460ecad01155840e5: dc018a49e64ad3a1bbf9a4db1f5576a35c9b72e5: in 
+ran git checkout master in 
+ran git reset --hard dc018a49e64ad3a1bbf9a4db1f5576a35c9b72e5 in 
+ran clean --force -d . in 
+ran git merge 6f1e2404013390bb13efa79460ecad01155840e5 in 
+Step: build-step-build-build:
+
+cat: /builder/home/basic-auth-user.json: No such file or directory
+cat: /builder/home/basic-auth-pass.json: No such file or directory
+rm -rf **-build-templates/charts
+rm -rf **-build-templates/**-build-templates*.tgz
+rm -rf **-build-templates/requirements.lock
+helm init --client-only
+Creating /builder/home/.helm 
+Creating /builder/home/.helm/repository 
+Creating /builder/home/.helm/repository/cache 
+Creating /builder/home/.helm/repository/local 
+Creating /builder/home/.helm/plugins 
+Creating /builder/home/.helm/starters 
+Creating /builder/home/.helm/cache/archive 
+Creating /builder/home/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Adding local repo with URL: http://127.0.0.1:8879/charts 
+$HELM_HOME has been configured at /builder/home/.helm.
+Not installing Tiller due to 'client-only' flag having been set
+helm repo add jenkinsxio https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkinsxio" has been added to your repositories
+helm dependency build **-build-templates
+No requirements found in **-build-templates/charts.
+helm lint **-build-templates
+==> Linting **-build-templates
+Lint OK
+
+1 chart(s) linted, no failures
+./**/scripts/test.sh
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/jenkins-**:256.0.422
+gcr.io/jenkinsxio/jenkins-csharp:256.0.422
+gcr.io/jenkinsxio/jenkins-cwp:256.0.422
+gcr.io/jenkinsxio/jenkins-elixir:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-go:256.0.422
+gcr.io/jenkinsxio/jenkins-gradle:256.0.422
+gcr.io/jenkinsxio/jenkins-javascript:256.0.422
+gcr.io/jenkinsxio/jenkins-jenkins:256.0.422
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+gcr.io/jenkinsxio/jenkins-python:256.0.422
+gcr.io/jenkinsxio/jenkins-ruby:256.0.422
+gcr.io/jenkinsxio/jenkins-rust:256.0.422
+gcr.io/jenkinsxio/jenkins-scala:256.0.422
+gcr.io/jenkinsxio/jenkins-**:256.0.422
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/builder-**:0.1.641
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
+gcr.io/jenkinsxio/jenkins-maven:256.0.422
